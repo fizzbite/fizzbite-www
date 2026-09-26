@@ -8,6 +8,7 @@
   --brand-soft: #fff0eb;
   --fizz: #ffc53d;
   --mint: #2bb58a;
+  --mint-ink: #17775a;
 
   --bg: #fffaf6;
   --bg-alt: #fff3ea;
@@ -36,6 +37,7 @@
     --ink: #fbf1ea;
     --ink-2: #c7b6ac;
     --line: #3a2d27;
+    --mint-ink: #5fd3aa;
     --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
     color-scheme: dark;
   }
@@ -443,8 +445,16 @@ a { color: inherit; }
   font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
   padding: 6px 12px; border-radius: 999px;
 }
+.no-contract {
+  display: inline-flex; align-items: center;
+  margin: 8px 0 0; padding: 8px 16px; border-radius: 999px;
+  background: color-mix(in srgb, var(--mint) 15%, transparent);
+  color: var(--mint-ink); font-weight: 600;
+}
 .plan-for { color: var(--ink-2); font-size: .95rem; min-height: 3em; }
 .price { display: flex; align-items: baseline; gap: 4px; margin: 4px 0 20px; }
+.price:has(+ .plan-note) { margin-bottom: 6px; }
+.plan-note { margin: 0 0 20px; font-size: .85rem; font-weight: 600; color: var(--mint-ink); }
 .price .amount { font: 800 2.75rem/1 var(--font-display); letter-spacing: -.03em; }
 .price .per { color: var(--ink-2); }
 .plan ul { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 10px; flex: 1; }
